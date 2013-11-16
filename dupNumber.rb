@@ -7,15 +7,22 @@ y = 1
 
 a = array.sort
 
-a.each do |item|
-	if a[x] == a[y]
-		a_dup << a[x]
-	end
+while y < a.length
 
-	x += 1
-	y += 1
+
+	a.each do |item| 
+		if a[x] == a[y]
+			a_dup << a[x]
+		end
+
+		x += 1
+		y += 1
 		
 	end
+end
+
+
+
 return a_dup
 
 end
