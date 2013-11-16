@@ -1,6 +1,6 @@
 class StateInFull
 
-@@state_abbr = {
+@@STATE_ABBR = {
 		  'AL' => 'Alabama',
 		  'AK' => 'Alaska',
 		  'AS' => 'America Samoa',
@@ -60,36 +60,16 @@ class StateInFull
 		  'WI' => 'Wisconsin',
 		  'WY' => 'Wyoming'
 		}
-	@@state_full = @@state_abbr.invert
+	@@STATE_FULL = @@STATE_ABBR.invert
 
 		
 
 	def get_full(acronym)
-
-		# acr = acronym.upcase
-
-		# if @state_abbr.has_key?(acr)
-		# 	return @state_abbr[acr]
-		# else
-		# 	return "No Match Found, Check Spelling."
-		# end
-
-		@@state_abbr[acronym.upcase] ||  "No Match Found, check spelling"
-
+		@@STATE_ABBR[acronym.upcase] ||  "No Match Found, check spelling"
 	end
 
 	def get_abbr(state)
-
-		# full = state.capitalize
-
-		# if @state_full.has_key?(full)
-		# 	return @state_full[full]
-		# else
-		# 	return "No Match Found, Check Spelling"
-		# end
-
-		@@state_full[state.capitalize] ||  "No Match Found, check spelling"
-
+		@@STATE_FULL[state.capitalize] ||  "No Match Found, check spelling"
 	end
 
 
@@ -105,4 +85,4 @@ puts name2
 
 puts state.get_abbr('Alabama')
 
-puts state.get_abbr('adgMa')
+puts state.get_abbr('Puerto rico')
